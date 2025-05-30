@@ -33,3 +33,10 @@ margin: 20px;
 background-color: red;
 margin: 20px auto;
 }
+
+#box{
+border: 1px solid black;
+width: 500px;
+height: 250px;
+margin: 25px auto;
+}

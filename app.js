@@ -2,6 +2,42 @@ var button = document.querySelector('button'); //querySelector=method
 var box = document.getElementById('changeMe');
 var colors = ['purple','red', 'blue', 'green', 'black'];
 
+var newBox = document.getElementById('box');
+
+var details = {
+  color: 'red',
+  name: 'Box',
+  disappear: function(){
+    newBox.style.visibility = 'hidden';
+  }
+}
+
+function revealShape(){
+  newBox.style.visibility = 'visible';
+}
+
+function magicTrick(){
+  details.disappear();
+}
+
+function revealColor(){
+  details.color = prompt("What color do you want the box to be?");
+  if(details.color === null || details.color === ''){
+    details.color = 'red'; //default color
+    alert("You didn't enter a color, so the box will be red.");
+  }
+  newBox.style.background = details.color;
+}
+
+function revealName(){
+  details.name = prompt('what do you want to call the box?');
+  if(details.name === null || details.name === ''){
+    details.name = 'Rectangle';
+    alert("You didn't enter a name so the box will be called Rectangle.");
+  }
+  newBox.innerHTML = details.name;
+}
+
 function changeColor(){
 switch (box.style.background){
   case colors[0]:
