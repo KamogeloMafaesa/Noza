@@ -1,6 +1,6 @@
 var button = document.querySelector('button'); //querySelector=method
 var box = document.getElementById('changeMe');
-var colors = ['purple','red', 'blue', 'green', 'black'];
+var colors = ['purple','red', 'blue', 'green', 'black', 'yellow', 'orange'];
 
 var newBox = document.getElementById('box');
 
@@ -18,6 +18,10 @@ function revealShape(){
 
 function magicTrick(){
   details.disappear();
+
+  if(box !== null){
+    box.style.background = 'Transparent';
+  }
 }
 
 function revealColor(){
@@ -69,6 +73,12 @@ function TestColor(){
    box.style.background = color;
 }
 
+
+function changeColorAgain(){
+   for(i = 0; i < colors.length; i++){
+    box.innerHTML += "<p  style ='background-color:" + colors[i] + ";padding:10px; color:white; font-size:1.5em;'>" + colors[i] + "</p>";
+   }
+}
 
 
 
